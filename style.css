@@ -1,0 +1,293 @@
+/*------------------*/
+/*--SCSS main File--*/
+/*------------------*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* colors :
+  black : #272727;
+  grey : #DFDFDF;
+  lblue :C0E8F9
+  dgray :272727
+
+*/
+/* ----------------------- */
+/* ---Custom Propreties--- */
+/* ----------------------- */
+/* ------------------- */
+/* ---Utility Class--- */
+/* ------------------- */
+.bg-grey {
+  background-color: #d9d9d9;
+}
+
+.bg-green {
+  background-color: #04e762;
+}
+
+.bg-black {
+  background-color: #262626;
+}
+
+.fc-grey {
+  color: #d9d9d9;
+}
+
+.fc-black {
+  color: #262626;
+}
+
+.fcblue {
+  color: #bee7f9;
+}
+
+body {
+  font-family: "Old Standard TT", serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  line-height: 0.7;
+}
+
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 2em 0;
+}
+
+.fs-small {
+  font-size: 1rem;
+}
+
+.fs-large {
+  font-size: 1.25rem;
+}
+
+.fs-subhead {
+  font-size: 1.5rem;
+}
+
+.fs-head {
+  font-size: 2rem;
+}
+
+.fs-title {
+  font-size: 10rem;
+}
+
+.fw-thick {
+  font-weight: 800;
+}
+
+.fw-bold {
+  font-weight: 600;
+}
+
+.ls-small {
+  letter-spacing: 4px;
+}
+
+.ls {
+  letter-spacing: 6px;
+}
+
+.ls-large {
+  letter-spacing: 8px;
+}
+
+.fs-old {
+  font-family: "Old Standard TT", serif;
+}
+
+.fs-bebas {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 1em;
+}
+
+img {
+  display: inline-block;
+  width: 100%;
+  background-size: cover;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  place-items: center;
+  background: #04e762;
+  border-radius: 0 15px 15px 15px;
+}
+
+.icon img {
+  height: 24px;
+  width: 24px;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cta {
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+
+.cta-link {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 600;
+  border: none;
+  padding: 0.5em 1.5em;
+  border-radius: 0.5em;
+}
+
+.cta:hover,
+.cta:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+/* ---------------- */
+/* ----Styling----- */
+/* ---------------- */
+.hero {
+  min-height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.hero .bg {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background-image: url(./images/heroBg.jpg);
+  background-position: calc(100vw + 80vw);
+  background-size: cover;
+  mix-blend-mode: multiply;
+}
+
+.hero .container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 1;
+}
+
+.hero .container h2 {
+  margin-left: 0.5em;
+  margin-bottom: 1em;
+}
+
+.hero .container .hero-content {
+  margin-left: 0.5em;
+}
+
+.hero .container .hero-content p {
+  margin-bottom: 1em;
+}
+
+.why-choose-us .container {
+  width: 100%;
+}
+
+.card-wrapper {
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  width: 100%;
+}
+
+.why-choose-us .card-wrapper::after {
+  z-index: -1;
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  width: 140%;
+  aspect-ratio: 1.5;
+  background-color: red;
+  background-color: #262626;
+}
+
+.card {
+  width: 50vw;
+  height: 200px;
+  max-width: 200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background: #ffff;
+  padding: 2em 0;
+  border-radius: 0 2em 2em 2em;
+}
+
+.card p {
+  width: 60%;
+}
+
+.card-wrapper .hidden {
+  display: none;
+}
+
+.delecious-delights {
+  margin-top: 2rem;
+}
+/*# sourceMappingURL=style.css.map */
