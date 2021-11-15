@@ -35,6 +35,14 @@
   background-color: #262626;
 }
 
+.bg-white {
+  background-color: #ffff;
+}
+
+.bg-blue {
+  background-color: #bee7f9;
+}
+
 .fc-grey {
   color: #d9d9d9;
 }
@@ -43,8 +51,12 @@
   color: #262626;
 }
 
-.fcblue {
+.fc-blue {
   color: #bee7f9;
+}
+
+.fc-white {
+  color: #ffff;
 }
 
 body {
@@ -63,7 +75,7 @@ h1 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
   padding: 2em 0;
 }
@@ -216,10 +228,34 @@ img {
 
 .hero .container .hero-content {
   margin-left: 0.5em;
+  max-width: 600px;
 }
 
 .hero .container .hero-content p {
   margin-bottom: 1em;
+}
+
+.modelBg {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  -webkit-transform: translateX(-5vw);
+          transform: translateX(-5vw);
+  background: rgba(38, 38, 38, 0.8);
+}
+
+.model {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #d9d9d9;
+  color: #262626;
+  padding: 1em;
+  text-transform: capitalize;
+  text-align: center;
+  border-radius: 0.7em;
 }
 
 .why-choose-us .container {
@@ -227,39 +263,17 @@ img {
 }
 
 .card-wrapper {
-  -ms-flex-wrap: no-wrap;
-      flex-wrap: no-wrap;
-  position: relative;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 1em 0;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  width: 100%;
-}
-
-.why-choose-us .card-wrapper::after {
-  z-index: -1;
-  content: "";
-  display: block;
-  position: absolute;
-  top: -10%;
-  left: -10%;
-  -webkit-transform: rotate(-5deg);
-          transform: rotate(-5deg);
-  width: 140%;
-  aspect-ratio: 1.5;
-  background-color: red;
-  background-color: #262626;
 }
 
 .card {
@@ -274,7 +288,6 @@ img {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background: #ffff;
   padding: 2em 0;
   border-radius: 0 2em 2em 2em;
 }
@@ -283,11 +296,182 @@ img {
   width: 60%;
 }
 
-.card-wrapper .hidden {
-  display: none;
-}
-
 .delecious-delights {
   margin-top: 2rem;
+  padding: 0;
+}
+
+.delecious-delights .container {
+  margin: 0;
+  padding-bottom: 3em;
+  width: 100vw;
+}
+
+.delecious-delights .card-container {
+  padding: 0;
+  background: #000000;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.delecious-delights .card-wrapper {
+  max-width: 600px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.delecious-delights .card-wrapper .card {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  height: auto;
+  border-radius: 0;
+  gap: 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.delecious-delights .card-wrapper .card .image {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.delecious-delights .card-wrapper .card img {
+  width: 150px;
+  margin-left: 1rem;
+}
+
+.delecious-delights .card-wrapper .card p {
+  width: 30vw;
+  margin-right: 1rem;
+}
+
+.del-payment {
+  padding-bottom: 3em;
+}
+
+.del-payment .card-wrapper .card {
+  min-width: 250px;
+  max-width: 300px;
+  height: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 0;
+  border-radius: 1em;
+}
+
+.del-payment .card-wrapper .card .image img {
+  width: 50px;
+  margin-left: 1em;
+}
+
+.del-payment .card-wrapper .card .card-contents {
+  text-align: center;
+  margin-left: 1em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+}
+
+.del-payment .card-wrapper .card .card-contents p:first-child {
+  text-transform: uppercase;
+}
+
+.del-payment .card-wrapper .card .card-contents p:last-child {
+  line-height: 1;
+}
+
+.contact-form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: none;
+  height: 2em;
+  padding-inline: 1em;
+  font-size: 1rem;
+  color: #bee7f9;
+  border-bottom: 1px solid #bee7f9;
+  margin: 0.5em 0;
+  resize: none;
+}
+
+.contact-form textarea {
+  min-height: 3em;
+}
+
+@media (min-width: 400px) {
+  .card-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .del-payment .card {
+    max-width: 100px;
+  }
+  .delecious-delights .card-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .delecious-delights .card-wrapper .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .delecious-delights .card-wrapper .card p {
+    width: 50%;
+  }
+}
+
+@media (min-width: 600px) {
+  .hero .bg {
+    background-position: center;
+    background-size: cover;
+  }
 }
 /*# sourceMappingURL=style.css.map */
